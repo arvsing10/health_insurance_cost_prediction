@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>insurance cost prediction</title>
+ <style>
+     body{background-color:#5F9EA0;}
+ </style>
+</head>
+<body>
+<center>
+<div>
+<h1>INSURANCE COST PREDICTION</h1>
+
+<form action="{{url_for('predict')}}" method="post">
+    <div><input type="text" name="age" placeholder="ENTER YOUR AGE"></div><br>
+    <div><input type="text" name="sex" placeholder="ENTER YOU SEX"></div><br>
+    
+   <div> <input type="text" name="bmi" placeholder="ENTER YOUR BMI"></div><br>
+    <div><input type="text" name="children" placeholder="ENTER NO OF CHILDREN YOU HAVE"></div><br>
+    <div><input type="text" name="smoker" placeholder="ENTER YOU SMOKE OR NOT"></div><br>
+      
+   <div> <input type="text" name="region" placeholder="ENTER REGION"></div><br>
+    <h4>1 for Male and 0 for Female<h4>
+        <h4>1 for Yes and 0 for No </h4>
+    <h4>0 for northeast 1 for northwest 2 for southeast 3 for southwest</h4>
+<button  type="submit" class="btn btn-primary">predict</button><br>
+
+</form></div>
+<h1>{{prediction}}</h1></center>
+</body>
+</html>
